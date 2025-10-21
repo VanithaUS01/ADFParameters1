@@ -1,0 +1,24 @@
+{
+	"name": "InputData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MySql2ADF",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"OnPremTableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "MySqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": {
+				"value": "@dataset().OnPremTableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
